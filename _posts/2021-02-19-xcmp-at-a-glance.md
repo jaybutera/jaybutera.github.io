@@ -1,4 +1,3 @@
-# Xcmp at a glance
 With Polkadot's rococo-v1 test net rolling out, the first cross-parachain message channels are starting to form. It is all very new so this document has been my attempt to understand the core concepts that motivate the Xcmp protocol, and see how real messages are constructed. It may also serve as an engineer's TL;DR.
 
 Xcmp (Cross-Chain Message Protocol) is a way for consensus systems to communicate/operate with eachother over a shared notion of assets. The specification [lists the core concepts](https://github.com/paritytech/xcm-format#definitions) (axioms) of the protocol, such as notions of location and account types. Interestingly, an asset definition is not on the list; they are defined in terms of location/identity (see MultiAsset).
