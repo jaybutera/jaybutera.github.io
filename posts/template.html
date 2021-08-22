@@ -4,8 +4,15 @@
         <meta charset="UTF-8"/>
         <title>◊(select-from-metas 'title metas)</title>
     </head>
+    <style>
+    #body {
+        margin-right: 10%;
+    }
+    </style>
     <body>
-        <h1>◊(select-from-metas 'title metas)</h1>
-        ◊(->html doc #:splice? #t)
+        <div id="body">
+            <h1>◊(select-from-metas 'title metas)</h1>
+            ◊(->html doc #:splice? #t)
+        </div>
     </body>
 </html>
