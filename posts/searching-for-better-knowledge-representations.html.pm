@@ -1,7 +1,7 @@
 #lang pollen
 
 ◊(define-meta title "Searching For Better Knowledge Representations")
-◊(define-meta published "2021-11-07")
+◊(define-meta published "2021-07-11")
 
 The core tenet of functional programming is that something that changes is no longer considered the same thing. There are perspectives that reality works in this way. For instance, that each passing moment is a just a frame in space-time and perhaps even you are dying and being reborn in every moment. The useful feature of this perspective is that history is preserved perfectly and it is up to the observer how the state of what-is should be perceived.
 

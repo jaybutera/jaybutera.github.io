@@ -1,13 +1,26 @@
 #lang pollen
 
+◊(require pollen/cache)
 ◊(require racket/string)
 
-◊(define post-links
-  (map (λ (filename)
-         (link (format "./posts/~a" (string-trim filename ".pm"))
-               (string-trim filename ".html.pm")))
-    (filter (λ (x) (string-suffix? x ".html.pm"))
-      (map path->string (directory-list "./posts")))))
+◊(define (sort-by-published paths)
+  (sort paths
+        (λ (x y)
+          (let ([xdate (select 'published (cached-metas x))]
+                [ydate (select 'published (cached-metas y))])
+            (string>? xdate ydate)))))
 
-◊p{Writings by Jay Butera}
+◊(define post-links
+  (map (λ (path)
+    (let ([meta-data (cached-metas path)])
+         (link (string-trim path ".pm")
+               (format "~a ~a"
+                 (select 'published meta-data)
+                 (select 'title meta-data)))))
+    
+    (sort-by-published
+      (filter (λ (x) (string-suffix? x ".html.pm"))
+        (map (λ (path) (format "./posts/~a" (path->string path))) (directory-list "./posts"))))))
+
 ◊ul{◊post-links}
+◊h3{Writings by Jay Butera}
