@@ -2,7 +2,14 @@
     <head>
         <link rel="stylesheet" href="tufte.css"/>
     </head>
+    <style>
+        #body {
+            margin-top: 10%;
+        }
+    </style>
 <body>
-    ◊(->html doc #:splice? #t)
+    <div id="body">
+        ◊(->html doc #:splice? #t)
+    </div>
 </body>
 </html>
