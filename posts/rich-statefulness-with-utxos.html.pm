@@ -12,7 +12,7 @@ In Themelio's MelVM loops are bounded by some number N (it will run at most N ti
 
 
 ◊(h2 "Rich Statefulness")
-◊(epigraph "This ability to authorize state changes without completely setting all coins in an account free, is what I mean by "rich statefulness". It can be implemented in many ways, some UTXO-based, but without it a blockchain is not powerful enough to implement most layer 2 protocols")
+◊(epigraph "This ability to authorize state changes without completely setting all coins in an account free, is what I mean by \"rich statefulness\". It can be implemented in many ways, some UTXO-based, but without it a blockchain is not powerful enough to implement most layer 2 protocols")
 
 It's well known that Bitcoin is a form of money, not an embedded computer/state machine like Ethereum. In Bitcoin's UTXO model there is no way to track coins with any notion of a persistent storage like a smart contract. Themelio is different by one subtle feature that Vitalik alludes to, "Note particularly that in this model [the script] does not have access to the destination of the transaction." In Themelio a script can inspect the transaction that spends it. Although the only thing a script can do is return yes or no for whether a transaction can spend it, we can still get persistent storage and smart contracts using the "self-propagation" design pattern.
 
