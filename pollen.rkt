@@ -6,6 +6,7 @@
          code-inline
          code-block
          ul
+         epigraph
          link)
 
 (define (root . elements)
@@ -20,9 +21,11 @@
   (txexpr 'code empty elements))
 
 (define (link a name)
-  ;(txexpr 'a `((href ,a)) (symbol->string name)))
-  ;(txexpr 'a `((href ,a)) name))
   `(a ((href ,a)) ,name))
 
 (define (ul elements)
   `(ul ,@(map (λ (x) `(li ,x)) elements)))
+
+(define (epigraph txt)
+  `(div ((class "epigraph"))
+     (blockquote (p ,txt))))
