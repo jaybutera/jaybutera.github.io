@@ -6,7 +6,7 @@
 Coming from the Ethereum ecoystem it's a common belief that Turing-complete smart contracts are needed to have a sufficiently powerful layer 1 (L1) blockchain. In Vitalk Buterin's post ◊(link "https://vitalik.ca/general/2019/12/26/mvb.html" "Base Layers and Functionality Escape Velocity") he lays out the requirements he believes are necessary for a blockchain in order to support L2 applications effectively. Contrary to what an Ethereum maximalist might think, the Themelio UTXO model fits very well with Vitalik's requirements. Vitalik says that an L1 needs 3 things: A programming language, rich statefulness, and data scalability. 
 
 ◊(h2 "A Programming Language")
-◊(epigraph "Any program in one Turing-complete language can be translated into an equivalent program in any other Turing-complete language. However, it turns out that we only need something slightly lighter: it's okay to restrict to programs without loops, or programs which are guaranteed to terminate in a specific number of steps.")
+◊(epigraph "Any program in one Turing-complete language can be translated into an equivalent program in any other Turing-complete language. However, it turns out that we only need something slightly lighter: it's okay to restrict to programs without loops, or programs which are guaranteed to terminate in a specific number of steps." "Vitalik Buterin, \"Base Layers and Functionality Escape Velocity\"")
 
 In Themelio's MelVM loops are bounded by some number N (it will run at most N times). The program counter also only moves forward on the "tape" so programs are guaranteed to terminate - making them non-Turing-complete. Why design a non-Turing-complete VM when you can have a Turing-complete one?
 
@@ -16,7 +16,7 @@ It's also worth pointing out that in practice on the blockchain the EVM is not T
 
 
 ◊(h2 "Rich Statefulness")
-◊(epigraph "This ability to authorize state changes without completely setting all coins in an account free, is what I mean by \"rich statefulness\". It can be implemented in many ways, some UTXO-based, but without it a blockchain is not powerful enough to implement most layer 2 protocols")
+◊(epigraph "This ability to authorize state changes without completely setting all coins in an account free, is what I mean by \"rich statefulness\". It can be implemented in many ways, some UTXO-based, but without it a blockchain is not powerful enough to implement most layer 2 protocols" "\"Base Layers and Functionality Escape Velocity\"")
 
 It's well known that Bitcoin is a form of money, not an embedded computer/state machine like Ethereum. In Bitcoin's UTXO model there is no way to track coins with any notion of a persistent storage like a smart contract. Themelio is different by one subtle feature that Vitalik alludes to, "Note particularly that in this model [the script] does not have access to the destination of the transaction." In Themelio a script can inspect the transaction that spends it. Although the only thing a script can do is return yes or no for whether a transaction can spend it, we can still get persistent storage and smart contracts using the "self-propagation" design pattern.
 
