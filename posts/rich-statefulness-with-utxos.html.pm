@@ -3,7 +3,7 @@
 ◊(define-meta published "2021-09-12")
 ◊(define-meta title "Rich Statefulness With UTXOs")
 
-Coming from the Ethereum ecoystem it's a common belief that Turing-complete smart contracts are needed to have a sufficiently powerful layer-1 (L1) blockchain. In Vitalk Buterin's post ◊(link "https://vitalik.ca/general/2019/12/26/mvb.html" "Base Layers and Functionality Escape Velocity") he lays out the requirements he believes are necessary for a blockchain in order to supp ort L2 applications effectively. Contrary to what an Ethereum maximalist might think, the Themelio UTXO model fits very well with Vitalik's requirements. Vitalik says that an L1 needs 3 things: A programming language, rich statefulness, and data scalability. 
+Coming from the Ethereum ecoystem it's a common belief that Turing-complete smart contracts are needed to have a sufficiently powerful layer 1 (L1) blockchain. In Vitalk Buterin's post ◊(link "https://vitalik.ca/general/2019/12/26/mvb.html" "Base Layers and Functionality Escape Velocity") he lays out the requirements he believes are necessary for a blockchain in order to support L2 applications effectively. Contrary to what an Ethereum maximalist might think, the Themelio UTXO model fits very well with Vitalik's requirements. Vitalik says that an L1 needs 3 things: A programming language, rich statefulness, and data scalability. 
 
 ◊(h2 "A Programming Language")
 ◊(epigraph "Any program in one Turing-complete language can be translated into an equivalent program in any other Turing-complete language. However, it turns out that we only need something slightly lighter: it's okay to restrict to programs without loops, or programs which are guaranteed to terminate in a specific number of steps.")
