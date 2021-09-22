@@ -14,7 +14,7 @@
   (map (λ (path)
     (let ([meta-data (cached-metas path)])
          (link (string-trim path ".pm")
-               (format "~a ~a"
+               (format "[~a] ~a"
                  (select 'published meta-data)
                  (select 'title meta-data)))))
     
