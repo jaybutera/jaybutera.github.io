@@ -23,4 +23,3 @@
         (map (λ (path) (format "./posts/~a" (path->string path))) (directory-list "./posts"))))))
 
 ◊ul{◊post-links}
-◊h3{Writings by Jay Butera}

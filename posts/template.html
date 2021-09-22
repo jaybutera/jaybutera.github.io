@@ -1,16 +1,12 @@
 <html>
     <head>
-        <link rel="stylesheet" href="../tufte.css"/>
+        <!--<link rel="stylesheet" href="../tufte.css"/>-->
+        <link rel="stylesheet" href="../styles.css"/>
         <meta charset="UTF-8"/>
         <title>◊(select-from-metas 'title metas)</title>
     </head>
-    <style>
-    #body {
-        margin-right: 10%;
-    }
-    </style>
     <body>
-        <div id="body">
+        <div id="article-body">
             <h1>◊(select-from-metas 'title metas)</h1>
             ◊(->html doc #:splice? #t)
         </div>

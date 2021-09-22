@@ -5,7 +5,40 @@ code, pre > code {
     -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS */
 }
 
+ul {
+    list-style-type: none;
+}
+li {
+    margin: .5em;
+}
+
+blockquote p {
+    font-style: italic;
+}
+blockquote footer {
+    font-style: italic;
+}
+
 body {
+    margin: 1em;
     display: flex;
     flex-direction: column;
+}
+
+#home-body {
+    margin-top: 10%;
+}
+
+@media (min-width: 1000px) {
+    #article-body {
+        margin-right: 20%;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 1000px) {
+    #article-body {
+        margin-right: 0%;
+        margin-left: 0%;
+    }
 }
