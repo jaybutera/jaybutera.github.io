@@ -13,7 +13,8 @@ li {
 }
 
 a {
-    color: black;
+    color: #b1560f;
+    font-weight: bold;
     text-decoration: none;
 }
 a:hover {
