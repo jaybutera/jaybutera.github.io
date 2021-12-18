@@ -20,6 +20,9 @@
 (define (code-inline . elements)
   (txexpr 'code empty elements))
 
+(define (p . elems)
+  `(p elems))
+
 (define (link a name)
   `(a ((href ,a)) ,name))
 
