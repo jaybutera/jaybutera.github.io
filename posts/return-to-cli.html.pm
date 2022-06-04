@@ -9,8 +9,8 @@ hand-crafted clock rather than a mass-manufactured shoe.
 
 To see how this is possible, we'll look at the history of computing, going back
 to AT&T Bell Labs. We'll also look at the modern software ecosystem, and the
-differences between consumer-grade software, and the sort of "deep web" underbelly of
-software that exists on GitHub; inacessible to the average user.
+differences between consumer-grade software, and the sort of "deep web" underbelly
+of software that exists on GitHub; inacessible to the average user.
 
 This is not a romanticization of the good ol' days of computing. There are very
 practical reasons to investigate modern notions of user-interfaces. The modern
