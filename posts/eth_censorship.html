@@ -3,70 +3,12 @@
         <!--<link rel="stylesheet" href="../tufte.css"/>-->
         <link rel="stylesheet" href="../styles.css"/>
         <meta charset="UTF-8"/>
-        <title>Censorship fragility in Ethereum</title>
+        <title>Censorhsip and the Fragility of Ethereum</title>
     </head>
     <body>
         <div id="article-body">
-            <h1>Censorship fragility in Ethereum</h1>
-<p>
-The <a href="https://blog.bitmex.com/ofac-sanctions-ethereum-pos-some-technical-nuances/">article by BitMEX</a>
-covers two major choices of censorship for Ethereum validators post-merge.
-
-<br/><br/>
-1. Refuse to include OFAC banned transactions in blocks you produce
-<br/>
-2. Refuse to build on top of a chain that includes OFAC banned transactions
-
-<br/><br/>
-These seem like reasonable actions for validators to take in the face of
-participating in illegal activity. Tor exit node operators have been
-<a href="https://www.quora.com/Are-Tor-exit-node-operators-legally-responsible-if-someone-does-something-illegal-while-using-their-exit-node">known to
-be liable</a>
-for the traffic they relay; to be enforced when the government desires.
-
-<br/><br/>
-"The staker is voting on a source block, a target block and a head block, and
-in theory, what the staker is actually attesting to is all transactions between
-the last finalised block and the head block. The fact that the head block is
-referenced in the attestation is merely a technicality."
-
-<br/><br/>
-A blockchain is a way to serialize transactions into sequential blocks. The
-blocks are only the serialization format. The attestations in
-consensus represent a vote for the chain (all historical blocks), not just the
-latest. It seems very unlikely the law will miss this nuance between a vote for
-the latest block and voting for all blocks in the chain.
-
-<br/><br/>
-So the choice is really whether to comply with OFAC sanctions or not to. To
-refuse to vote for a canonical chain which contains Tornado transactions (to
-comply), means a portion of your stake will get slashed for not participating
-in consensus.
-
-<br/><br/>
-But only if it is a canonical chain. If greater than 2/3 of staked Eth complies
-then non-complicit validators' blocks will never be validated and complicit
-validators won't be penalized for censorship.
-
-<br/><br/>
-Looking at the <a href="https://beaconcha.in/pools">current pool distribution</a> it would
-be sufficient to censor the network if just the lido, coinbase, kraken and binance
-pools comply with sanctions.
-
-<br/><br/>
-If they all apply sanctions at once there's a good chance no one would flinch
-and the chain would successfully be censored. Since in the default
-non-complicit state of the network, validators are incentivized to not censor
-or else face slashing penalties, it's unlikely that any single major pool will
-want to apply sanctions alone.
-
-<br/><br/>
-Whether these four pools could work together to save their own liabilities and
-keep their stakers may be up to the only decentralized pool, Lido, which is
-operated by a DAO. However with the recent <a href="https://twitter.com/RyanSAdams/status/1558044593937170433">arrest of Alexey
-    Pertsev</a>
-DAO-ification is looking like a weak defense from legal liability.
-</p>
+            <h1>Censorhsip and the Fragility of Ethereum</h1>
+            <p>The <a href="https://blog.bitmex.com/ofac-sanctions-ethereum-pos-some-technical-nuances/">article by BitMEX Research</a> covers two major choices of censorship for Ethereum validators post-merge.</p><p>1. Refuse to include OFAC banned transactions in blocks you produce<br/>2. Refuse to build on top of a chain that includes OFAC banned transactions</p><p>These seem like reasonable actions for validators to take in the face of participating in illegal activity. Tor exit node operators have been <a href="https://www.quora.com/Are-Tor-exit-node-operators-legally-responsible-if-someone-does-something-illegal-while-using-their-exit-node">known to be liable</a> for the traffic they relay; to be enforced when the government desires.</p><p>“The staker is voting on a source block, a target block and a head block, and in theory, what the staker is actually attesting to is all transactions between the last finalised block and the head block. The fact that the head block is referenced in the attestation is merely a technicality.”</p><p>A blockchain is a way to serialize transactions into sequential blocks. The blocks are only the serialization format. The attestations in consensus represent a vote for the chain (all historical blocks), not just the latest. It seems very unlikely the law will miss this nuance between a vote for the latest block and voting for all blocks in the chain.</p><p>So the choice is really whether to comply with OFAC sanctions or not to. To refuse to vote for a canonical chain which contains Tornado transactions (to comply), means a portion of your stake will get slashed for not participating in consensus.</p><p>But only if it is a canonical chain. If greater than 2/3 of staked Eth complies then non-complicit validators’ blocks will never be validated and complicit validators won’t be penalized for censorship.</p><p>Looking at the [current pool distribution](https://beaconcha.in/pools) it would be sufficient to censor the network if just the lido, coinbase, kraken and binance pools comply with sanctions.</p><p>If they all apply sanctions at once there’s a good chance no one would flinch and the chain would successfully be censored. Since in the default non-complicit state of the network, validators are incentivized to not censor or else face slashing penalties, it’s unlikely that any single major pool will want to apply sanctions alone.</p><p>Whether these four pools could work together to save their own liabilities and keep their stakers may be up to the only decentralized pool, Lido, which is operated by a DAO. However with the recent <a href="https://twitter.com/RyanSAdams/status/1558044593937170433">arrest of Alexey Pertsev</a> DAO-ification is looking like a weak defense from legal liability.</p>
         </div>
     </body>
 </html>
